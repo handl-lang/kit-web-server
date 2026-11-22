@@ -1,0 +1,30 @@
+-- kit-web-server: kit.hnl v1 curation manifest (proposal P-004).
+-- Pure curation — no plugins, no entry/glue. `libs` entries are lib
+-- package names: the `lib-*` repo name minus the `lib-` prefix
+-- (e.g. repo `lib-serve-epoll` -> "serve-epoll"). Each package's own
+-- pkg.hnl `deps` pull its contracts and transitive backends.
+{
+  name: "kit-web-server",
+  description: "Serve HTTP from handl — epoll accept loop, HTTP/1.1 codec, TLS, WebSocket, JSON.",
+  license: "MIT",
+  libs: [
+    "serve",
+    "serve-epoll",
+    "concurrent",
+    "concurrent-epoll",
+    "http-rfc",
+    "tls",
+    "tls-libssl",
+    "ws",
+    "ws-frame",
+    "ws-frame-handl",
+    "ws-whatwg-c",
+    "ws-c",
+    "json",
+    "str",
+    "str-handl",
+    "bytes",
+    "curl",
+    "libc",
+  ],
+}
