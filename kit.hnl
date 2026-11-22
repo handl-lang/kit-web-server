@@ -5,7 +5,7 @@
 -- pkg.hnl `deps` pull its contracts and transitive backends.
 {
   name: "kit-web-server",
-  description: "Serve HTTP from handl — epoll accept loop, HTTP/1.1 codec, TLS, WebSocket, JSON.",
+  description: "Serve HTTP from handl — epoll accept loop, HTTP/1.1 codec + routing, TLS, WebSocket, JSON.",
   license: "MIT",
   libs: [
     "serve",
@@ -13,6 +13,7 @@
     "concurrent",
     "concurrent-epoll",
     "http-rfc",
+    "http-route",
     "tls",
     "tls-libssl",
     "ws",
