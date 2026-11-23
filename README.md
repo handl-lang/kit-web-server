@@ -21,8 +21,10 @@ manifests — sdkgen FFI bindings consumed via path deps; `lib-bytes` is a
 Rust-plugin module with no `pkg.hnl` yet.)
 
 Serving needs no glue: `serve((req) ~> resp, {port: 8080, tls?, on_ws?})`.
-There is no router lib yet (`lib-http-route` is a candidate); routing
-lives in the handler arrow. Linux-only (epoll/libcurl/libssl).
+Routing lives in `http-route` (named route maps, `:params`, `*wildcards`,
+405s) and `http-middleware` adds the onion-style `(ctx, next)` pipeline
+(CORS, logger, request-id, session, auth, CSRF, body-limit); both compose
+around the handler arrow. Linux-only (epoll/libcurl/libssl).
 
 ## Layout
 
