@@ -17,7 +17,7 @@ GitHub repo name minus the `lib-` prefix (e.g. `lib-serve-epoll` →
 package's own `pkg.hnl`: its `modules` declare what it ships and its
 `deps` pull contracts and transitive backends, so the kit lists the
 curated set, not the closure. (`lib-curl`/`lib-libc` ship metadata-only
-manifests — sdkgen FFI bindings consumed via path deps; `lib-bytes` is a
+manifests — codegen FFI bindings consumed via path deps; `lib-bytes` is a
 Rust-plugin module with no `pkg.hnl` yet.)
 
 Serving needs no glue: `serve((req) ~> resp, {port: 8080, tls?, on_ws?})`.
