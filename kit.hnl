@@ -19,6 +19,7 @@
     "http-router",
     "msg-router",
     "http-static",
+    "ip",
     "tls",
     "tls-libssl",
     "ws",
